@@ -16,3 +16,19 @@ Follow the instructions in this guide to [install IntelliJ IDEA on Ubuntu][2]
 
 [1]: https://www.javaworld.com/article/3114167/choosing-your-java-ide.html
 [2]: https://itsfoss.com/install-intellij-ubuntu-linux
+
+## Setting the project
+1. Download the folder flink-demo.
+2. Open IntelliJ.
+3. Click on Import Project and select the folder you've downloaded from GitHub.
+4. Select Maven as the external module.
+
+## Troubleshooting
+
+In case of problems in compiling the project, verify the following:
+
+### Verify the project's definition are correct
+1. Verify the correct JVM is associated with the project.
+2. Make sure the Java and Flink packages are included in the compilation; otherwise, you might encounter compilation errors.
+
+
