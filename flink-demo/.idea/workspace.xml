@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dac5f8af-6fc6-4f80-8662-af0cc4a1afae" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1a4FVLxhsqycAgaBdGK3NNyNY8M" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager">
+    <configuration name="StreamProcessingApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="MAIN_CLASS_NAME" value="flinkdemo.process.StreamProcessingApp" />
+      <module name="FlinkStreamingDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="flinkdemo.process.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.StreamProcessingApp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dac5f8af-6fc6-4f80-8662-af0cc4a1afae" name="Default Changelist" comment="" />
+      <created>1585986981089</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585986981089</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Remove the old content and clean unnecessary files.">
+      <created>1586016713870</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586016713870</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Remove the old content and clean unnecessary files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove the old content and clean unnecessary files." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="126" width="1084" height="777" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586333318148">
+      <screen x="67" y="27" width="1853" height="898" />
+    </state>
+    <state x="403" y="124" width="1084" height="777" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1757.881@67.27.1757.881" timestamp="1585987302070" />
+    <state x="421" y="126" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.898@67.27.1853.898" timestamp="1586333318148" />
+    <state x="725" y="308" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1586333191810">
+      <screen x="67" y="27" width="1853" height="898" />
+    </state>
+    <state x="725" y="308" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog/67.27.1853.898@67.27.1853.898" timestamp="1586333191810" />
+    <state x="461" y="27" width="959" height="881" key="CommitChangelistDialog2" timestamp="1586016712474">
+      <screen x="67" y="27" width="1757" height="881" />
+    </state>
+    <state x="461" y="27" width="959" height="881" key="CommitChangelistDialog2/67.27.1757.881@67.27.1757.881" timestamp="1586016712474" />
+    <state x="1305" y="315" width="424" height="484" key="FileChooserDialogImpl" timestamp="1586334714334">
+      <screen x="67" y="27" width="1853" height="898" />
+    </state>
+    <state x="1241" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1757.881@67.27.1757.881" timestamp="1585987281571" />
+    <state x="1305" y="315" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.898@67.27.1853.898" timestamp="1586334714334" />
+    <state width="903" height="227" key="GridCell.Tab.0.bottom" timestamp="1586335939666">
+      <screen x="67" y="27" width="1853" height="898" />
+    </state>
+    <state width="1711" height="222" key="GridCell.Tab.0.bottom/67.27.1757.881@67.27.1757.881" timestamp="1586330541266" />
+    <state width="903" height="227" key="GridCell.Tab.0.bottom/67.27.1853.898@67.27.1853.898" timestamp="1586335939666" />
+    <state width="903" height="227" key="GridCell.Tab.0.center" timestamp="1586335939664">
+      <screen x="67" y="27" width="1853" height="898" />
+    </state>
+    <state width="1711" height="222" key="GridCell.Tab.0.center/67.27.1757.881@67.27.1757.881" timestamp="1586330541265" />
+    <state width="903" height="227" key="GridCell.Tab.0.center/67.27.1853.898@67.27.1853.898" timestamp="1586335939664" />
+    <state width="903" height="227" key="GridCell.Tab.0.left" timestamp="1586335939663">
+      <screen x="67" y="27" width="1853" height="898" />
+    </state>
+    <state width="1711" height="222" key="GridCell.Tab.0.left/67.27.1757.881@67.27.1757.881" timestamp="1586330541265" />
+    <state width="903" height="227" key="GridCell.Tab.0.left/67.27.1853.898@67.27.1853.898" timestamp="1586335939663" />
+    <state width="903" height="227" key="GridCell.Tab.0.right" timestamp="1586335939665">
+      <screen x="67" y="27" width="1853" height="898" />
+    </state>
+    <state width="1711" height="222" key="GridCell.Tab.0.right/67.27.1757.881@67.27.1757.881" timestamp="1586330541266" />
+    <state width="903" height="227" key="GridCell.Tab.0.right/67.27.1853.898@67.27.1853.898" timestamp="1586335939665" />
+    <state x="448" y="44" width="1024" height="845" key="SettingsEditor" timestamp="1586335342606">
+      <screen x="67" y="27" width="1853" height="898" />
+    </state>
+    <state x="428" y="44" width="1024" height="845" key="SettingsEditor/67.27.1757.881@67.27.1757.881" timestamp="1585987238724" />
+    <state x="448" y="44" width="1024" height="845" key="SettingsEditor/67.27.1853.898@67.27.1853.898" timestamp="1586335342606" />
+    <state x="601" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1586320102280">
+      <screen x="67" y="27" width="1757" height="881" />
+    </state>
+    <state x="601" y="294" key="com.intellij.ide.util.TipDialog/67.27.1757.881@67.27.1757.881" timestamp="1586320102280" />
+    <state x="778" y="41" width="917" height="884" key="find.popup" timestamp="1586336039253">
+      <screen x="67" y="27" width="1853" height="898" />
+    </state>
+    <state x="741" y="41" width="869" height="867" key="find.popup/67.27.1757.881@67.27.1757.881" timestamp="1586329539251" />
+    <state x="778" y="41" width="917" height="884" key="find.popup/67.27.1853.898@67.27.1853.898" timestamp="1586336039253" />
+  </component>
+</project>
