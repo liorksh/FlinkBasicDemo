@@ -27,7 +27,7 @@ public  class Utils {
     // Ensure the folder exists; otherwise, create the folder.
     public  static void ensureFolderExists(String folderPath) throws IOException {
         if(Files.exists(Paths.get(folderPath))==false){
-            Files.createDirectory(Paths.get(folderPath));
+            Files.createDirectories(Paths.get(folderPath));
         }
         else{
             // Clean out the directory
