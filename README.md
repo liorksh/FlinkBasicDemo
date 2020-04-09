@@ -29,19 +29,19 @@ Follow the instructions in this guide to [install IntelliJ IDEA on Ubuntu][2]
 ## The project structure and folders
 
 After opening the project witn intelliJ, open Project Sessting --> Modules. There you should see the following structure and configuration:
-1. Project's sources
+1. Project's sources, which outline is structure
 ![project sources](images/project-sources.png)
+
 2. Project's paths
+
 ![project pathes](images/project-paths.png)
+
 3. Project's dependencies
 ![project dependencies](images/project-dependencies.png)
 
-The outline of the project's files and folders should be:
-![project folders](images/project-folders.png)
-
-
 ## Compile and Run
 After building the project, you can run the main application:
+
 ![run the project](images/project-run.png)
 
 If you have compilation problems or runtime errors, please refer to the Troubleshooting clause.
@@ -52,12 +52,19 @@ In case of problems in compiling or running the project, verify the following:
 
 ### Verify the project's definitions are correct
 1. Verify the correct JVM is associated with the project.
+
 ![JVM](images/project-JVM.png)
-2. Make sure the Java and Flink packages are included in the compilation; otherwise, you might encounter compilation errors.
+
+2. Make sure the Java and Flink packages are included in the compilation, and change the packages scope to "Compile"; otherwise, you might encounter compilation errors.
+
 ![compile packages](images/compile-packages.png)
+
 3. If the pom.xml file cannot be found, you will receive the alert below; then, set the project as a Maven project.
+
 ![set as a Maven project](images/set-maven-project.png)
+
 4. Another alert might be related to importing Maven dependencies. Setting Auto-Import can assist.
+
 ![import Maven](images/maven-import.png)
 
 ## Feedback
