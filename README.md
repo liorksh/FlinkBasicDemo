@@ -44,9 +44,26 @@ After building the project, you can run the main application:
 
 ![run the project](images/project-run.png)
 
-If you encounter compilation problems or runtime errors, please refer to the Troubleshooting clause.
+The application presents a simple menu for the user to select what kind of stream processing to run, for example: basic processing, split and merge streams, process streams based on a session time-based window.
 
-## Troubleshooting
+*If you encounter compilation problems or runtime errors, please refer to the Troubleshooting clause.*
+
+### Project files and functionality
+
+* The main application runs from [StreamProcessingApp class][6].
+* Each stream processing class implemets the [ProcessStream interface][5].
+* Examples for the various [stream processes classes][3]: 
+  * BasicStreamOperations: process events and save the results into a sink destination (folder).
+  * SplitStreamOperation: split stream into more than one stream, while converting the data type. Afterwards, calling a method to merge two streams and produce a new type of stream.
+  * TimeBasedWindowOperations: group the stream and process it based on a time-based session window.
+* Auxiliary and data object classes are located under the [common folder][4].
+
+[3]: https://github.com/liorksh/FlinkBasicDemo/tree/master/flink-demo/src/main/java/flinkdemo/process
+[4]: https://github.com/liorksh/FlinkBasicDemo/tree/master/flink-demo/src/main/java/flinkdemo/common
+[5]: https://github.com/liorksh/FlinkBasicDemo/blob/master/flink-demo/src/main/java/flinkdemo/process/ProcessStream.java
+[6]: https://github.com/liorksh/FlinkBasicDemo/blob/master/flink-demo/src/main/java/flinkdemo/process/StreamProcessingApp.java
+
+## Troubleshooting 
 
 In case of problems in compiling or running the project, verify the following:
 
@@ -67,9 +84,9 @@ In case of problems in compiling or running the project, verify the following:
 
 ![import Maven](images/maven-import.png)
 
-## Feedback
+## Give Feedback
 
-Hope you find this repository useful; feel free to engage me.
+Hope you find this repository useful; feel free to engage.
 
 
 
