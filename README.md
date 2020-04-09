@@ -28,15 +28,15 @@ Follow the instructions in this guide to [install IntelliJ IDEA on Ubuntu][2]
 
 ## The project structure and folders
 
-After opening the project witn intelliJ, open Project Sessting --> Modules. There you should see the following structure and configuration:
-1. Project's sources, which outline is structure
+After opening the project witn IntelliJ, select Project Setting --> Modules. On the left window, you should see the following structure and configuration:
+1. Project's sources, which outline its structure
 ![project sources](images/project-sources.png)
 
-2. Project's paths
+2. Project's paths (the targets to the .class files)
 
 ![project pathes](images/project-paths.png)
 
-3. Project's dependencies
+3. Project's dependencies (JVM and associated packages)
 ![project dependencies](images/project-dependencies.png)
 
 ## Compile and Run
@@ -44,7 +44,7 @@ After building the project, you can run the main application:
 
 ![run the project](images/project-run.png)
 
-If you have compilation problems or runtime errors, please refer to the Troubleshooting clause.
+If you encounter compilation problems or runtime errors, please refer to the Troubleshooting clause.
 
 ## Troubleshooting
 
