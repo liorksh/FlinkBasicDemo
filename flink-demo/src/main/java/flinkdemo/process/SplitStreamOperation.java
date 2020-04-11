@@ -13,54 +13,21 @@ import org.apache.flink.streaming.api.functions.co.CoMapFunction;
 import org.apache.flink.util.Collector;
 import org.apache.flink.util.OutputTag;
 
-
+// This class implements split and merge streams operations.
 public class SplitStreamOperation implements ProcessStream {
 
-    public static DataStream<Tuple4<String, String, String, Integer>>  mergeStreams(DataStream<Tuple2<String, Integer>> singerStream, DataStream<Tuple2<String, String>> playerStream) {
-
-        // The returned stream definition includes both streams data type
-        ConnectedStreams<Tuple2<String, Integer>, Tuple2<String, String>> mergedStream
-                = singerStream
-                .connect(playerStream);
-
-
-        DataStream<Tuple4<String, String, String, Integer>> combinedStream
-                = mergedStream.map(new CoMapFunction<
-                Tuple2<String, Integer>, //Stream 1
-                Tuple2<String, String>, //Stream 2
-                Tuple4<String, String, String, Integer> //Output
-                >() {
-
-                    @Override
-                    public Tuple4<String, String, String, Integer>  //Process Stream 1
-                    map1(Tuple2<String, Integer> singer) throws Exception {
-                        return new Tuple4<String, String, String, Integer>
-                                ("Source: singer stream", singer.f0, "", singer.f1);
-                    }
-
-                    @Override
-                    public Tuple4<String, String, String, Integer> //Process Stream 2
-                    map2(Tuple2<String, String> player) throws Exception {
-                        return new Tuple4<String, String, String, Integer>
-                        ("Source: player stream", player.f0, player.f1, 0);
-                    }
-                });
-
-        return  combinedStream;
-
-    }
-
+    // This method receives a stream and executes split and merge operations
     public void process(DataStream<String> inputStream) {
 
             // Define a separate stream for Players
             final OutputTag<Tuple2<String,String>> playerTag
                     = new OutputTag<Tuple2<String,String>>("player"){};
 
-            // Define a separate stream for Players
+            // Define a separate stream for Singers
             final OutputTag<Tuple2<String,Integer>> singerTag
                     = new OutputTag<Tuple2<String,Integer>>("singer"){};
 
-            //Convert each record to an Object
+            // Convert each record to an InputData object and split the main stream into two side streams.
             SingleOutputStreamOperator<InputData> inputDataMain
                     = inputStream
                     .process(new ProcessFunction<String, InputData>() {
@@ -71,7 +38,7 @@ public class SplitStreamOperation implements ProcessStream {
                                 Context ctx,
                                 Collector<InputData> collInputData) {
 
-                            Utils.print(Utils.COLOR_CYAN, "Received Record : " + inputStr);
+                            Utils.print(Utils.COLOR_CYAN, "Received record : " + inputStr);
 
                             // Convert a String to an InputData Object
                             InputData inputData = InputData.getDataObject(inputStr);
@@ -100,11 +67,11 @@ public class SplitStreamOperation implements ProcessStream {
                         }
                     });
 
-            //Convert side output into a data stream
+            // Collects the side output stream
             DataStream<Tuple2<String,String>> playerTrail
                     = inputDataMain.getSideOutput(playerTag);
 
-            //Convert side output into a data stream
+            // Collects the side output stream
             DataStream<Tuple2<String,Integer>> singerTrail
                     = inputDataMain.getSideOutput(singerTag);
 
@@ -121,7 +88,7 @@ public class SplitStreamOperation implements ProcessStream {
                     }).
                     returns(Types.TUPLE(Types.STRING, Types.STRING));
 
-            //Print Singers summaries
+            //Print the count of all the events in the original stream
             PrintStream.generateDataStreamCount(
                 inputStream.map( i -> (Object)i),
                 windowInterval,
@@ -138,7 +105,7 @@ public class SplitStreamOperation implements ProcessStream {
                     windowInterval,
                     String.format("Player entities in last %d secs", windowInterval));
 
-            // Print the main stream count (after splitting the Player and Singer entities)
+            // Print the count of elements that were left in the main stream after the split (after splitting the Player and Singer entities)
             PrintStream.generateDataStreamCount(
                 inputDataMain.map( i -> (Object)i),
                 windowInterval,
@@ -158,5 +125,40 @@ public class SplitStreamOperation implements ProcessStream {
                         return null;
                     }
                 });
+    }
+
+    // This method implements a merge stream operation. The inputs are two types of streams, which converges into a third type.
+    public static DataStream<Tuple4<String, String, String, Integer>>
+    mergeStreams(DataStream<Tuple2<String, Integer>> singerStream, DataStream<Tuple2<String, String>> playerStream) {
+
+        // The returned stream definition includes both streams data type
+        ConnectedStreams<Tuple2<String, Integer>, Tuple2<String, String>> mergedStream
+                = singerStream
+                .connect(playerStream);
+
+
+        DataStream<Tuple4<String, String, String, Integer>> combinedStream
+                = mergedStream.map(new CoMapFunction<
+                Tuple2<String, Integer>, //Stream 1
+                Tuple2<String, String>, //Stream 2
+                Tuple4<String, String, String, Integer> //Output
+                >() {
+
+            @Override
+            public Tuple4<String, String, String, Integer>  //Process Stream 1
+            map1(Tuple2<String, Integer> singer) throws Exception {
+                return new Tuple4<String, String, String, Integer>
+                        ("Source: singer stream", singer.f0, "", singer.f1);
+            }
+
+            @Override
+            public Tuple4<String, String, String, Integer> //Process Stream 2
+            map2(Tuple2<String, String> player) throws Exception {
+                return new Tuple4<String, String, String, Integer>
+                        ("Source: player stream", player.f0, player.f1, 0);
+            }
+        });
+
+        return  combinedStream;
     }
 }
